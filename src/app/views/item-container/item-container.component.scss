@@ -1,0 +1,21 @@
+section {
+  max-width: 1200px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+app-card {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  app-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  app-card {
+    width: 25%;
+  }
+}

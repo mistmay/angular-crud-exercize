@@ -1,0 +1,18 @@
+<main>
+  <div class="py-5 px-0 px-md-5">
+    <section class="my-0 mx-auto p-5 bg-white">
+      <div *ngIf="booksList.length > 0; else noBooks"
+        [ngClass]="{'d-flex align-items-center flex-wrap': booksList.length > 0}">
+        <ng-container *ngIf="isCardView; else table">
+          <app-card *ngFor="let book of booksList" [book]="book" (bookToDelete)="bookToDelete.emit($event)"></app-card>
+        </ng-container>
+      </div>
+    </section>
+  </div>
+</main>
+<ng-template #table>
+  <app-table [booksList]="booksList" (bookToDelete)="bookToDelete.emit($event)" class="w-100"></app-table>
+</ng-template>
+<ng-template #noBooks>
+  <p class="text-center fs-2 fw-bold">No Books</p>
+</ng-template>

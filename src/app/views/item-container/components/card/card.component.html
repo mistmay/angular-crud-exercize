@@ -1,0 +1,7 @@
+<div class="book-card w-100 p-3 d-flex flex-column align-items-center gap-2 text-center fw-bold">
+  <div class="card-image w-100" [ngStyle]="{'background-image': getImgUrl()}">
+  </div>
+  <span>Title: {{ book.title }}</span>
+  <span>Author: {{ book.authorName }} {{ book.authorSurname }}</span>
+  <button type="button" class="btn btn-danger" (click)="bookToDelete.emit(book.id)">Delete</button>
+</div>

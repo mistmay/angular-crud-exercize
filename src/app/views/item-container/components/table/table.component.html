@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th class="d-none d-sm-table-cell">Cover</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of booksList">
+      <td class="d-none d-sm-table-cell">
+        <div class="table-img" [ngStyle]="{'background-image': getImgUrl(book.cover)}">
+        </div>
+      </td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.authorName }} {{ book.authorSurname }}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="bookToDelete.emit(book.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

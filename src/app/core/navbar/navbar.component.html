@@ -1,0 +1,10 @@
+<header class="w-100">
+  <nav class="py-1 px-3 w-100 h-100 d-flex justify-content-between align-items-center bg-primary">
+    <h1 class="fs-2 fw-bold text-white d-none d-sm-block">Books Database</h1>
+    <div class="d-flex justify-content-between align-items-center gap-1">
+      <button type="button" class="btn btn-danger" (click)="isCardView.emit(true)">Card View</button>
+      <button type="button" class="btn btn-danger" (click)="isCardView.emit(false)">Table View</button>
+      <button type="button" class="btn btn-danger" (click)="openModal()">Add New Book</button>
+    </div>
+  </nav>
+</header>
